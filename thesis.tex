@@ -1,0 +1,56 @@
+% !TeX spellcheck = en_US
+%!TEX TS-program = xelatex  
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[AcMaster]{ref/BJTU-thesis}  %硕士
+%\documentclass[Doctor]{ref/BJTU-thesis}	%博士
+%%%%%%%%%%%%%%%填写封面信息%%%%%%%%%%%%%%%%%%%%
+\author{傅怡麒}
+\studentNumber{16120364}
+\advisor{丁\quad 丁}
+\advisorTitle{副教授}
+\degreeType{工\quad 学}
+\major{计算机科学与技术}
+\researchArea{云计算}
+\title{基于服务质量预测的云服务推荐研究}
+\englishtitle{Research on Cloud Service Recommendation based on QoS Prediction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setmainfont{Times New Roman}
+%%%%%%%%%%%%%%%用户自定义包%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}%数学公式
+\usepackage{amssymb}%数集集合
+\usepackage{graphicx}%插图
+\usepackage{subfigure}%多图并排
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %画表多行
+\usepackage{colortbl}%背景色
+\definecolor{mygray}{gray}{.9}
+\usepackage{algorithm} %伪代码包 
+\usepackage{algpseudocode} %
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}  % Input快捷键
+\renewcommand{\algorithmicensure}{\textbf{Output:}} % Output快捷键
+\usepackage{verbatim}%多行注释
+\usepackage{cite}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	\makecover
+	\makeAuthorization
+	\makeInfo
+	\include{tex/thanks}
+	\include{tex/abstract}
+	\include{tex/englishabstract}
+	\tableofcontents
+	\newpage\pagenumbering{arabic}
+%%%%%%%%%%论文主体部分开始%%%%%%%%%%%%%%%%%%%%%%%%%
+	\include{tex/introduction}
+	\include{tex/related_work}
+	\include{tex/novel_idea_1}
+	\include{tex/novel_idea_2}
+	\include{tex/summary_future}
+%%%%%%%%%%论文主体部分结束%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\nocite{*}
+	\bibliography{ref/ref.bib}
+	\include{tex/results}
+	\include{tex/declaration}
+	\include{tex/metadata}
+\end{document}
